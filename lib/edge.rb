@@ -1,8 +1,8 @@
 class Edge
-attr_reader :start, :terminus, :weight
-  def initialize(start, terminus, weight)
+attr_reader :start, :finish, :weight
+  def initialize(start, finish, weight)
       @start = start
-      @terminus = terminus
+      @finish = finish
       @weight = weight
   end
 end
