@@ -1,7 +1,9 @@
 #Tech Test Challenge, Problem One: Trains
 ##Caitlin Gulliford, 05/12/16
 
-###Challenge Instructions
+###Partial solution which creates a graph of edges and calculates distance value. To run the tests, run rspec in terminal from root directory.
+
+####Challenge Instructions
 
 The local commuter railroad services a number of towns in Kiwiland.  Because of monetary concerns, all of the tracks are 'one-way.'  That is, a route from Kaitaia to Invercargill does not imply the existence of a route from Invercargill to Kaitaia.  In fact, even if both of these routes do happen to exist, they are distinct and are not necessarily the same distance!
 
