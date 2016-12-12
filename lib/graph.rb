@@ -27,3 +27,4 @@ attr_accessor :edges
         end
         dist
   end
+end

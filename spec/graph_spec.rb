@@ -37,11 +37,13 @@ describe Graph do
 
   context 'number of trips tests' do
     it 'counts the number of possible journeys for route C-C with max 3 stops' do
+      Infinity = 1.0 / 0
       subject.parse_n_build('testinput.txt')
       expect(subject.num_of_trips('C', 'C', :min_stops => 1, :max_stops => 2)).to eq (2)
     end
 
     it 'counts the number of possible journeys for route A-C with exactly 4 stops' do
+      Infinity = 1.0 / 0
       subject.parse_n_build('testinput.txt')
       expect(subject.num_of_trips('A', 'C', :min_stops => 4, :max_stops => 4)).to eq (3)
     end
