@@ -20,7 +20,7 @@ attr_accessor :edges
   def distance(path)
         dist = 0
         path.each_char.map.inject do |start, finish|
-          return nil unless @edges.any? { |edge| edge.start == start && edge.finish == finish}
+          return 'NO SUCH ROUTE' unless @edges.any? { |edge| edge.start == start && edge.finish == finish}
           correct_edge = @edges.find { |edge| edge.start == start && edge.finish == finish }
           dist += correct_edge.weight
           finish
@@ -28,4 +28,4 @@ attr_accessor :edges
         dist
   end
 
-end
+  
