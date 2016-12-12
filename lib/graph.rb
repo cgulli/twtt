@@ -27,4 +27,13 @@ attr_accessor :edges
         end
         dist
   end
+
+  def num_of_trips(start, finish, opts= {})
+
+  end
+
+
+  def shortest_dis(start, finish)
+
+  end
 end

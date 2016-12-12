@@ -43,13 +43,11 @@ describe Graph do
     end
 
     it 'counts the number of possible journeys for route A-C with exactly 4 stops' do
-      Infinity = 1.0 / 0
       subject.parse_n_build('testinput.txt')
       expect(subject.num_of_trips('A', 'C', :min_stops => 4, :max_stops => 4)).to eq (3)
     end
 
     it 'counts the number of possible journeys for route C-C with distance >30' do
-      Infinity = 1.0 / 0
       subject.parse_n_build('testinput.txt')
       expect(subject.num_of_trips('A', 'C', :min_stops => 1, :max_stops => Infinity, :max_distance => 30)).to eq (7)
     end
@@ -58,12 +56,12 @@ describe Graph do
   context 'shortest distance tests' do
     it 'finds the shortest distance possible for route A-C' do
       subject.parse_n_build('testinput.txt')
-      expect(subject.shortest_dis('AC')). to eq (9)
+      expect(subject.shortest_dis('A', 'C')). to eq (9)
     end
 
     it 'finds the shortest distance possible for route B-B' do
       subject.parse_n_build('testinput.txt')
-      expect(subject.shortest_dis('BB')). to eq (9)
+      expect(subject.shortest_dis('B', 'B')). to eq (9)
     end
   end
 end
